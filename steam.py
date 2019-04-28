@@ -30,28 +30,19 @@ def writeToExcel(assets, descriptions):
     r = r+1
     for item in descriptions: #item is a dict of one description
         tags = item['tags']
-        name_found = False
-        card_found = False
-        is_card = False
-        game_name = ""
-        for tag in tags:
-            if not(card_found and name_found):
-                if tag['category'] == 'Game':
-                    name_found = True;
-                    game_name = tag['localized_tag_name']
-                elif tag['category'] == 'item_class':
-                    card_found = True
-                    if tag['localized_tag_name'] == 'Trading Card':
-                        is_card = True
-        if is_card == True:
-            ws.cell(row=r, column=col_game, value=game_name)
-            ws.cell(row=r, column=col_name, value=item['name'])
-            r = r+1
+        if(len(tags) == 4):
+            is_card = False
+            game_tag = tags[1]
+            class_tag = tags[3]
+            if class_tag['localized_tag_name'] == 'Trading Card':
+                is_card = True
+            if is_card:
+                game_name = game_tag['localized_tag_name']
+                ws.cell(row=r, column=col_game, value=game_name)
+                ws.cell(row=r, column=col_name, value=item['name'])
+                r = r+1
 
 
-    
-    
-    
     wb.save('file.xlsx')
 
 getInventory('76561198089894938');
