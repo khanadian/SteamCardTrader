@@ -1,0 +1,27 @@
+my profileID: 76561198089894938
+
+http://steamcommunity.com/inventory/<PROFILEID>/753/6
+753 is the appID for steam, 6 is the contextID 
+
+instance ID is shared between 'description' and 'assets'
+
+key = instance ID
+value = [name, amount, game/game's appID, value]
+
+
+Final product:
+spreadsheet
+	displays buying and selling price of cards in your inventory
+		price should be chosen based on likelyhood of being bought
+	shows games that should have their card pack bought/sold
+	
+TODO:
+ - filter out items in inventory that are not trading cards
+ - place data in spreadsheet
+ - get prices for items from the market or 3rd party API
+	- also get how many sales took place in last 24 hours
+ - get complete card pack information for games
+
+	
+
+
