@@ -16,12 +16,16 @@ spreadsheet
 	shows games that should have their card pack bought/sold
 	
 TODO:
- - filter out items in inventory that are not trading cards
- - place data in spreadsheet
  - get prices for items from the market or 3rd party API
 	- also get how many sales took place in last 24 hours
  - get complete card pack information for games
 
 	
+important links:
+
+steam api: https://stackoverflow.com/questions/17393099/getting-someones-steam-inventory/17679641#17679641
+writing a spreadsheet in python: https://openpyxl.readthedocs.io/en/stable/
+
+
 
 
