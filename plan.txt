@@ -3,12 +3,6 @@ my profileID: 76561198089894938
 http://steamcommunity.com/inventory/<PROFILEID>/753/6
 753 is the appID for steam, 6 is the contextID 
 
-instance ID is shared between 'description' and 'assets'
-
-key = instance ID
-value = [name, amount, game/game's appID, value]
-
-
 Final product:
 spreadsheet
 	displays buying and selling price of cards in your inventory
@@ -24,8 +18,13 @@ TODO:
 important links:
 
 steam api: https://stackoverflow.com/questions/17393099/getting-someones-steam-inventory/17679641#17679641
+eg https://steamcommunity.com/inventory/76561198089894938/753/6
 writing a spreadsheet in python: https://openpyxl.readthedocs.io/en/stable/
-
+market query: https://steamcommunity.com/groups/community_market/discussions/0/846940249109605642/
+eg https://steamcommunity.com/market/search/render/?query=skelet+blackhole
+faster market query: https://stackoverflow.com/questions/23055673/get-the-price-of-an-item-on-steam-community-market-with-php-and-regex
+eg https://steamcommunity.com/market/priceoverview/?currency=20&appid=753&market_hash_name=322680-Skelet
+id finder: https://steamidfinder.com/lookup/spyguy001/
 
 
 
