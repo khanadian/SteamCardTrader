@@ -13,11 +13,6 @@ def getInventory(steamid):
     json_data = json.loads(data.read())
     descriptions = json_data['descriptions']
     assets = json_data['assets']
-    inv_count = json_data['total_inventory_count']
-    print(inv_count)
-    time = math.floor(float(inv_count)/25)*4 #25 items every 4 minutes
-    print('this will take at least ' + str(time) + ' minutes')
-        #print(item['market_hash_name'])
     writeToExcel(assets, descriptions)
     print ('Done!')
     #return
@@ -26,7 +21,7 @@ def writeToExcel(assets, descriptions):
     wb = Workbook() 
     ws = wb.active
 
-    count = 0 #number of successful requests, should always reach 25
+    count = 0 #number of successful requests
     r = 1
     col_name = 1
     col_price = 3
@@ -50,9 +45,6 @@ def writeToExcel(assets, descriptions):
                 
                 price = getPrice(item['market_hash_name'], game_name, count)
                 if(price == 0):
-                    #time.sleep(4*60)
-##                    while(price == 0):
-##                        price = getPrice(item['name'], game_name, count)
                     count = 0 
                 count = count+1
                 ws.cell(r, col_price, price)
