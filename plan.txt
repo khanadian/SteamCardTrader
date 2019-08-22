@@ -13,6 +13,8 @@ TODO:
  - get prices for items from the market or 3rd party API
 	- also get how many sales took place in last 24 hours
  - get complete card pack information for games
+ - skip unnecessary writing to file
+	- recognize file and overwrite it, if exists
 
 	
 important links:
